@@ -7,7 +7,7 @@
     android:padding="16dp">
 
     <ImageView
-        android:id="@+id/img_item_pic"
+        android:id="@+id/img_pic"
         android:layout_width="55dp"
         android:layout_height="55dp"
         android:layout_marginEnd="16dp"
@@ -16,10 +16,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_toEndOf="@id/img_item_pic"
+        android:layout_toEndOf="@id/img_pic"
         android:orientation="vertical">
         <TextView
-            android:id="@+id/tv_item_name"
+            android:id="@+id/tv_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -27,7 +27,7 @@
             android:textStyle="bold"
             tools:text="@string/object_name" />
         <TextView
-            android:id="@+id/tv_item_detail"
+            android:id="@+id/tv_short_detail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ellipsize="end"

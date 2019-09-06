@@ -1,8 +1,6 @@
-package io.github.heisid.solarsystemcheatsheet.model;
+package io.github.heisid.solarsystemcheatsheet;
 
 import java.util.ArrayList;
-
-import io.github.heisid.solarsystemcheatsheet.R;
 
 public class ObjectsData {
     private static String[] objectNames = {

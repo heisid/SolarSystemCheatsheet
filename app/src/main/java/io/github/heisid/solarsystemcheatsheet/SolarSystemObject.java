@@ -1,4 +1,4 @@
-package io.github.heisid.solarsystemcheatsheet.model;
+package io.github.heisid.solarsystemcheatsheet;
 
 public class SolarSystemObject {
     private String name;
