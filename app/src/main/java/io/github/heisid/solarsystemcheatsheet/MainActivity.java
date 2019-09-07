@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         rvSolarSystem = findViewById(R.id.rv_solarsystem);
         rvSolarSystem.setHasFixedSize(true);
 
-        list.addAll(ObjectsData.getListData());
+        list.addAll(SolarSystemObjectsData.getListData());
         showRecyclerList();
     }
 

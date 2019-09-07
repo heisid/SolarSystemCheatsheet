@@ -2,7 +2,7 @@ package io.github.heisid.solarsystemcheatsheet;
 
 import java.util.ArrayList;
 
-public class ObjectsData {
+public class SolarSystemObjectsData {
     private static String[] objectNames = {
             "Sun",
             "Jupiter",
