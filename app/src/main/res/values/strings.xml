@@ -2,4 +2,6 @@
     <string name="app_name">SolarSystemCheatsheet</string>
     <string name="object_name">Object Name</string>
     <string name="object_short_detail">Object Short Detail</string>
+    <string name="exit">Exit</string>
+    <string name="about">About</string>
 </resources>
