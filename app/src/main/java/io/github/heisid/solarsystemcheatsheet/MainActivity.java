@@ -52,7 +52,25 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intentAbout);
                 break;
             case R.id.exit:
-                break;
+                final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		builder.setTitle("Quit");
+		builder.setMessage("Quit?");
+		builder.setPositiveButton("Yes", new DialogInterface.onClickListener() {
+			@Override
+			public void onClick(DialogInterface dialogInterface, int i) {
+				finish();
+			}
+		});
+		builder.setNegativeButton("No", new DialogInterface.onClickListener() {
+			@Override
+			public void onClick(DialogInterface dialogInterface, int i) {
+				dialogInterface.dismiss();
+			}
+		});
+
+		AlertDialog alertDialog = builder.create();
+		alertDialog.show();
+
         }
     }
 }
