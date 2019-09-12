@@ -4,4 +4,8 @@
     <string name="object_short_detail">Object Short Detail</string>
     <string name="exit">Exit</string>
     <string name="about">About</string>
+    <string name="solar_system_cheatsheet">Solar System Cheatsheet</string>
+    <string name="meong">Meong</string>
+    <string name="email">weird_alien@protonmail.com</string>
+    <string name="github">https://github.com/heisid</string>
 </resources>

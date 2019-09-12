@@ -25,6 +25,26 @@ public class SolarSystemObjectsData {
             "Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System after Mercury. In English, Mars carries a name of the Roman god of war and is often referred to as the \'Red Planet\'."
     };
 
+    // aphelion, perihelion, orbital period, radius, mass, surface gravity, rotation period
+    private static Double[][] objectDetails = {
+            // sun
+            {},
+            // jupiter
+            {},
+            // saturn
+            {},
+            // uranus
+            {},
+            // neptune
+            {},
+            // earth
+            {},
+            // venus
+            {0.728213, 0.718440, 224.701, 6051.8, 4.8675e24, 8.87, -243.025},
+            // mars
+            {}
+    };
+
     private static int[] objectPics = {
             R.drawable.sun,
             R.drawable.jupiter,
