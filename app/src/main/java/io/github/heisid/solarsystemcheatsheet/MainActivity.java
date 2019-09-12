@@ -1,9 +1,11 @@
 package io.github.heisid.solarsystemcheatsheet;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -53,15 +55,15 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.exit:
                 final AlertDialog.Builder builder = new AlertDialog.Builder(this);
-		builder.setTitle("Quit");
-		builder.setMessage("Quit?");
-		builder.setPositiveButton("Yes", new DialogInterface.onClickListener() {
+//		builder.setTitle("Quit");
+		builder.setMessage("Exit?");
+		builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
 			@Override
 			public void onClick(DialogInterface dialogInterface, int i) {
 				finish();
 			}
 		});
-		builder.setNegativeButton("No", new DialogInterface.onClickListener() {
+		builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
 			@Override
 			public void onClick(DialogInterface dialogInterface, int i) {
 				dialogInterface.dismiss();
