@@ -11,7 +11,9 @@ public class SolarSystemObjectsData {
             "Neptune",
             "Earth",
             "Venus",
-            "Mars"
+            "Mars",
+            "Mercury",
+            "Pluto"
     };
 
     private static String[] objectShortDetails = {
@@ -22,7 +24,9 @@ public class SolarSystemObjectsData {
             "Neptune is the eighth and farthest known planet from the Sun in the Solar System. In the Solar System, it is the fourth-largest planet by diameter, the third-most-massive planet, and the densest giant planet.",
             "Earth is the third planet from the Sun and the only astronomical object known to harbor life. According to radiometric dating and other sources of evidence, Earth formed over 4.5 billion years ago.",
             "Venus is the second planet from the Sun. It is named after the Roman goddess of love and beauty. As the second-brightest natural object in the night sky after the Moon, Venus can cast shadows and, rarely, is visible to the naked eye in broad daylight.",
-            "Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System after Mercury. In English, Mars carries a name of the Roman god of war and is often referred to as the \'Red Planet\'."
+            "Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System after Mercury. In English, Mars carries a name of the Roman god of war and is often referred to as the \'Red Planet\'.",
+            "Mercury is the smallest and innermost planet in the Solar System. Its orbit around the Sun takes only 87.97 days, the shortest of all the planets in the Solar System.",
+            "Pluto (minor planet designation: 134340 Pluto) is a dwarf planet in the Kuiper belt, a ring of bodies beyond Neptune. It was the first Kuiper belt object to be discovered and is the largest known plutoid (or ice dwarf)."
     };
 
     // aphelion(km), perihelion(km), orbital period(d), radius(km), mass(kg), surface gravity(m/s2), rotation period(h)
@@ -42,7 +46,11 @@ public class SolarSystemObjectsData {
             // venus
             {1.089e8, 1.0747e8, 224.701, 6051.8, 4.8675e24, 8.87, -5832.6},
             // mars
-            {2.492e8, 2.067e8, 686.971, 3389.5, 6.417e23, 3.72, 24.6}
+            {2.492e8, 2.067e8, 686.971, 3389.5, 6.417e23, 3.72, 24.6},
+            // mercury
+            {6.9816e7, 4.001e7, 87.96, 2439.7, 3.3011e23, 3.7, 1407.5},
+            // pluto
+            {7.3759e9, 4.4368e9, 90560.0, 1188.3, 1.303e22, 0.620, 153.28}
     };
 
     private static int[] objectPics = {
@@ -53,8 +61,12 @@ public class SolarSystemObjectsData {
             R.drawable.neptune,
             R.drawable.earth,
             R.drawable.venus,
-            R.drawable.mars
+            R.drawable.mars,
+            R.drawable.mercury,
+            R.drawable.pluto
     };
+
+    private int just=0;
 
     static ArrayList<SolarSystemObject> getListData() {
         ArrayList<SolarSystemObject> l = new ArrayList<>();
