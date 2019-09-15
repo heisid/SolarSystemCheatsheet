@@ -16,6 +16,13 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     private RecyclerView rvSolarSystem;
     private ArrayList<SolarSystemObject> list = new ArrayList<>();
+    public static final double APHELION=0.0;
+    public static final double PERIHELION=0.0;
+    public static final double ORBITAL_PERIOD=0.0;
+    public static final double RADIUS=0.0;
+    public static final double MASS=0.0;
+    public static final double SURFACE_GRAVITY=0.0;
+    public static final double ROTATION_PERIOD=0.0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +34,10 @@ public class MainActivity extends AppCompatActivity {
 
         list.addAll(SolarSystemObjectsData.getListData());
         showRecyclerList();
+    }
+
+    private void showSelectedObject(SolarSystemObject solarSystemObject) {
+
     }
 
     private void showRecyclerList() {
@@ -55,23 +66,22 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.exit:
                 final AlertDialog.Builder builder = new AlertDialog.Builder(this);
-//		builder.setTitle("Quit");
-		builder.setMessage("Exit?");
-		builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+		        builder.setMessage("Exit?");
+		        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
 			@Override
 			public void onClick(DialogInterface dialogInterface, int i) {
 				finish();
 			}
 		});
-		builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
-			@Override
-			public void onClick(DialogInterface dialogInterface, int i) {
-				dialogInterface.dismiss();
-			}
-		});
+		        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+			        @Override
+			        public void onClick(DialogInterface dialogInterface, int i) {
+				        dialogInterface.dismiss();
+		        	}
+		        });
 
-		AlertDialog alertDialog = builder.create();
-		alertDialog.show();
+		        AlertDialog alertDialog = builder.create();
+		        alertDialog.show();
 
         }
     }

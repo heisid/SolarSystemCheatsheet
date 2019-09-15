@@ -3,6 +3,7 @@ package io.github.heisid.solarsystemcheatsheet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -16,6 +17,15 @@ import java.util.ArrayList;
 
 public class SolarSystemAdapter extends RecyclerView.Adapter<SolarSystemAdapter.ListViewHolder> {
     private ArrayList<SolarSystemObject> list;
+    private OnItemClickCallback onItemClickCallback;
+
+    public interface OnItemClickCallback {
+        public void onItemClicked(SolarSystemObject data);
+    }
+
+    public void setOnItemClickCallback(OnItemClickCallback onItemClickCallback) {
+        this.onItemClickCallback = onItemClickCallback;
+    }
 
     public SolarSystemAdapter(ArrayList<SolarSystemObject> list) {
         this.list = list;
@@ -29,7 +39,7 @@ public class SolarSystemAdapter extends RecyclerView.Adapter<SolarSystemAdapter.
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ListViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull final ListViewHolder holder, int position) {
         SolarSystemObject ssobj = list.get(position);
         Glide.with(holder.itemView.getContext())
                 .load(ssobj.getPic())
@@ -38,6 +48,12 @@ public class SolarSystemAdapter extends RecyclerView.Adapter<SolarSystemAdapter.
         holder.tvName.setText(ssobj.getName());
         holder.tvShortDetail.setText(ssobj.getShortDetail());
 
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onItemClickCallback.onItemClicked(list.get(holder.getAdapterPosition()));
+            }
+        });
     }
 
     @Override

@@ -8,4 +8,11 @@
     <string name="meong">Meong</string>
     <string name="email">weird_alien@protonmail.com</string>
     <string name="github">https://github.com/heisid</string>
+    <string name="source">Source: http://wikipedia.org</string>
+    <string name="perihelion">Perihelion</string>
+    <string name="aphelion">Aphelion</string>
+    <string name="orbital_period">Orbital Period</string>
+    <string name="radius">Radius</string>
+    <string name="mass">Mass</string>
+    <string name="rotation_period">Rotation Period</string>
 </resources>
