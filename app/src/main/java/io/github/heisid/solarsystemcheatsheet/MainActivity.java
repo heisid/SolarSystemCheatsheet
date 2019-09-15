@@ -33,6 +33,11 @@ public class MainActivity extends AppCompatActivity {
     private void showSelectedObject(SolarSystemObject solarSystemObject) {
         Intent detailIntent = new Intent(MainActivity.this, DetailActivity.class);
         detailIntent.putExtra(DetailActivity.NAME, solarSystemObject.getName());
+        // http://eazyprogramming.blogspot.com/2013/01/passing-image-between-activities.html
+        Bundle bundle = new Bundle();
+        bundle.putInt("PICTURE", solarSystemObject.getPic());
+        detailIntent.putExtras(bundle);
+        //detailIntent.putExtra(DetailActivity.PICTURE, solarSystemObject.getPic());
         detailIntent.putExtra(DetailActivity.SHORT_DETAIL, solarSystemObject.getShortDetail());
         detailIntent.putExtra(DetailActivity.OBJECT_DATA, solarSystemObject.getData());
         startActivity(detailIntent);
