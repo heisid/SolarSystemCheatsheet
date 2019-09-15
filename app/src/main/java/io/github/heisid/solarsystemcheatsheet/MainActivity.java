@@ -16,13 +16,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     private RecyclerView rvSolarSystem;
     private ArrayList<SolarSystemObject> list = new ArrayList<>();
-    public static final double APHELION=0.0;
-    public static final double PERIHELION=0.0;
-    public static final double ORBITAL_PERIOD=0.0;
-    public static final double RADIUS=0.0;
-    public static final double MASS=0.0;
-    public static final double SURFACE_GRAVITY=0.0;
-    public static final double ROTATION_PERIOD=0.0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,13 +31,23 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showSelectedObject(SolarSystemObject solarSystemObject) {
-
+        Intent detailIntent = new Intent(MainActivity.this, DetailActivity.class);
+        detailIntent.putExtra(DetailActivity.NAME, solarSystemObject.getName());
+        detailIntent.putExtra(DetailActivity.SHORT_DETAIL, solarSystemObject.getShortDetail());
+        detailIntent.putExtra(DetailActivity.OBJECT_DATA, solarSystemObject.getData());
+        startActivity(detailIntent);
     }
 
     private void showRecyclerList() {
         rvSolarSystem.setLayoutManager(new LinearLayoutManager(this));
         SolarSystemAdapter solarSystemAdapter = new SolarSystemAdapter(list);
         rvSolarSystem.setAdapter(solarSystemAdapter);
+        solarSystemAdapter.setOnItemClickCallback(new SolarSystemAdapter.OnItemClickCallback() {
+            @Override
+            public void onItemClicked(SolarSystemObject data) {
+                showSelectedObject(data);
+            }
+        });
     }
 
     @Override

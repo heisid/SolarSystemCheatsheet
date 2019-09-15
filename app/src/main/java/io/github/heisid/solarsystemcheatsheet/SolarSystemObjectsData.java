@@ -26,9 +26,9 @@ public class SolarSystemObjectsData {
     };
 
     // aphelion(km), perihelion(km), orbital period(d), radius(km), mass(kg), surface gravity(m/s2), rotation period(h)
-    private static Double[][] objectDetails = {
+    private static double[][] objectData = {
             // sun
-            {null, null, null, 695700.0 ,1.9885e30 ,247.0 ,601.2},
+            {0.0, 0.0, 0.0, 695700.0 ,1.9885e30 ,247.0 ,601.2},
             // jupiter
             {8.1662e8, 7.4052e8, 4332.59, 69911.0, 1.8982e27, 24.79, 9.925},
             // saturn
@@ -63,6 +63,7 @@ public class SolarSystemObjectsData {
             ssobj.setName(objectNames[i]);
             ssobj.setShortDetail(objectShortDetails[i]);
             ssobj.setPic(objectPics[i]);
+            ssobj.setData(objectData[i]);
             l.add(ssobj);
         }
         return l;

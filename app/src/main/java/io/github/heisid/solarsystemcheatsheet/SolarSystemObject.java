@@ -4,6 +4,7 @@ public class SolarSystemObject {
     private String name;
     private String shortDetail;
     private int pic;
+    private double[] data;
 
     public String getName() {
         return name;
@@ -28,4 +29,8 @@ public class SolarSystemObject {
     public void setPic(int pic) {
         this.pic = pic;
     }
+
+    public double[] getData() { return data; }
+
+    public void setData(double[] data) { this.data = data; }
 }
